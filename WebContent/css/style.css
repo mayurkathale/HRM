@@ -1,0 +1,108 @@
+.heading
+{
+	color:#FFFFFF;
+	font-size:20px;
+	padding-left: 10px;
+	background-color: #3E97B4;
+	float:top;
+}
+
+.footer
+{
+	background-color:silver;
+	border:none;
+}
+
+.datecss
+{
+	color:#FFFFFF;
+	border:none;
+	float: right;
+}
+
+.scroll-table{
+       height: 300px;
+       overflow: auto;
+    }
+
+.container 
+{
+
+			background-color:#F7F9F9;
+			padding:29px;
+			overflow:auto;
+			/* -moz-border-radius: 8px 8px 8px 8px; */
+  		  	border: 10px solid #F7F9F9;
+  		 	margin-right: 15px;
+  		  	-moz-box-shadow: 1px 1px 10px #989898;
+
+}
+
+
+#header #logo
+{
+
+	float:left;
+	color:#fff;		
+	font-family:Orator Std;
+	font-size:50px;
+	font-weight:bold;
+	padding-top:15px;
+	padding-bottom:15px;
+	padding-left: 100px;
+}
+
+
+#header #pagenav
+{
+	font-family:"Tahoma";
+	float:right;
+	line-height: 0px;	
+}	
+		
+		
+.mybutton
+{
+	cursor:pointer;
+	/*float:left;*/
+	height: 33px;
+	font-size: 14px;
+	font-weight: bold;
+									/* padding-left: 12px;
+									padding-right: 12px; */
+									border: 1px solid 
+									#9EB7CD;
+									border-bottom-color: 
+									#9EB7CD;
+									border-top-color: 
+									#C4D1DB;
+									border-left-color: 
+									#C4D1DB;
+									background-image: url(../images/buttonblue.png);
+									background-color: 
+									white;
+									/* background-position: left bottom; */
+									background-repeat: repeat-x;
+									text-shadow: 0 1px 1px 
+									white;
+									/* margin-left: 166px; */
+							}
+
+.fontbody
+{
+	font-family: "Tahoma";
+}
+
+
+	a:link,a:visited,a:active {
+
+		color:#1FA2E1;
+
+		text-decoration:none;
+
+	}
+	
+.hideextra { white-space: nowrap; overflow: hidden; text-overflow:ellipsis; }
+	
+					
+							

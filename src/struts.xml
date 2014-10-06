@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ <!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd" >
+
+<struts>
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.custom.i18n.resources" value="global" />
+	<package name="test" namespace="/" extends="struts-default">
+
+	 <result-types>
+			<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
+	 </result-types>
+	<!-- <interceptors>
+	 	<interceptor name="authenticate" class="interceptor.AdminAuth"></interceptor>
+	 	<interceptor name="authenticate1" class="interceptor.UserAuth"></interceptor>
+	 	<interceptor-stack name="authstack">
+	 		<interceptor-ref name="authenticate"/>
+	 	</interceptor-stack>
+	 	<interceptor-stack name="authstack1">
+	 		<interceptor-ref name="authenticate1"/>
+	 	</interceptor-stack>
+	 </interceptors> -->
+
+	 <action name="login" class="action.loginaction" method="auth"> 
+			<result  type="tiles" name="success">Success</result>
+			<result  type="tiles" name="failure">login_page</result>
+     </action>
+	   
+	<action name="Home" class="action.loginaction" method="homeaction"> 
+			<result  type="tiles" name="success">Home</result>
+     </action>
+     
+     <action name="contact_us" class="action.loginaction" method="contactaction"> 
+			<result  type="tiles" name="success">ContactUs</result>
+     </action>
+     
+     
+     <action name="intc" class="action.loginaction" method="intc"> 
+			<result  type="tiles" name="success">intc</result>
+     </action>
+    
+    
+     <action name="about_us" class="action.loginaction" method="aboutusaction"> 
+			<result  type="tiles" name="success">AboutUs</result>
+     </action>
+    
+     <action name="login_page" class="action.loginaction" method="login_page"> 
+			<result  type="tiles" name="success">login_page</result>
+     </action>
+     
+     
+     <action name="admin" class="action.loginaction" method="adminss"> 
+			<result  type="tiles" name="success">admin_home</result>
+     </action>
+     <action name="adminlogin" class="action.loginaction" method="adminlogin"> 
+			<result  type="tiles" name="success">admin_succ</result>
+			<result  type="tiles" name="failure">admin_home</result>
+     </action>
+     
+     <action name="createaccount" class="action.AdminActions" method="createaccount">
+			<result  type="tiles" name="success">createform</result>
+     </action>
+     
+     <action name="registration"  class="action.AdminActions" method="registration">
+     		<result  type="tiles" name="success">successinsert</result>
+     </action>
+     
+     <action name="view"  class="action.AdminActions" method="view"> <!--  -->
+     		<result  type="tiles" name="success">viewaccount</result>
+     </action>
+     <action name="modifypage"  class="action.AdminActions" method="modifypage">
+     		<result  type="tiles" name="success">modifypagetiles</result>
+     </action>
+     <action name="modifyacc"  class="action.AdminActions" method="modifyacc"> 
+   			<result  type="tiles" name="success">modifyacctiles</result>
+   			<result  type="tiles" name="failure">not_found</result>
+     </action>
+     
+     <action name="deleteaccount" class="action.AdminActions" method="deletepage">  
+			<result  type="tiles" name="success">deletepage</result>
+     </action>
+     <action name="deleteaccount_display" class="action.AdminActions" method="deleteaccount_display"> 
+			<result  type="tiles" name="success">deletedisplay</result>
+			<result  type="tiles" name="failure">not_found</result>
+     </action>
+     
+     <action name="delete_last" class="action.AdminActions" method="delete_last"> 
+			<result  type="tiles" name="success">deleted</result>
+     </action>
+     
+     <action name="modifyfinal"  class="action.AdminActions" method="modifyfinal">
+     		<result  type="tiles" name="success">modifysuccess</result>
+     </action>
+    
+     
+     <action name="depositpage"  class="action.AdminActions" method="depositpage">
+     		<result  type="tiles" name="success">depositadmin</result>
+     </action> 
+     <action name="admindeposit_check"  class="action.AdminActions" method="admindeposit_check">
+     		<result  type="tiles" name="success">deposit_page</result>
+     		<result  type="tiles" name="failure">not_found</result>
+     </action>
+     <action name="deposit_money"  class="action.AdminActions" method="deposit_money">
+     		
+     		<result  type="tiles" name="success">deposited_sucess</result>
+     		<result  type="tiles" name="failure">deposited_unsuccess</result>
+     		
+     </action>
+     
+     <action name="withdrawpage"  class="action.loginaction" method="withdrawpage">
+     		
+     		<result  type="tiles" name="success">withdrawal_page</result>
+     		
+     </action>
+     
+     <action name="withdrwal_check"  class="action.AdminActions" method="withdrwal_check">
+     		
+     		<result  type="tiles" name="success">withdrwal_check_success</result>
+     		<result  type="tiles" name="failure">not_found</result>
+     		
+     </action>
+     <action name="withdraw_money"  class="action.AdminActions" method="withdraw_money">
+     		
+     		<result  type="tiles" name="success">withrawal_success</result>
+     		<result  type="tiles" name="failure">withrawal_unsuccess</result>
+     		
+     </action>
+     
+     <action name="userdetails"  class="action.UserAction" method="userdetails">
+     		<result  type="tiles" name="success">userdetails_page</result>
+     		<result  type="tiles" name="intfailure">admin_succ</result>
+     </action>
+     
+      <action name="transactions"  class="action.UserAction" method="transact_statement">
+     		<result  type="tiles" name="success">transaction</result>
+     		<result  type="tiles" name="intfailure">admin_succ</result>
+     </action>
+     
+      <action name="transferpage"  class="action.UserAction" method="transferpage">
+     		<result  type="tiles" name="success">transfer_page</result>
+     		<result  type="tiles" name="intfailure">admin_succ</result>
+     </action>
+     
+     <action name="transferfund"  class="action.UserAction" method="transferfund">
+     		<result  type="tiles" name="success">transfer_succ</result>
+     		<result  type="tiles" name="failure">transfer_unsucc</result>	
+     		<result  type="tiles" name="notfound">not_found</result>	
+     </action>
+     
+      <action name="logout"  class="action.loginaction" method="logout">
+     		<result  type="tiles" name="success">Home</result>
+     </action>
+	</package>
+</struts>

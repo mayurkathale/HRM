@@ -1,0 +1,179 @@
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+      "http://tiles.apache.org/dtds/tiles-config_2_0.dtd"> 
+       
+<tiles-definitions>
+	<definition name="MainLayout" template="/jsp/MyLayout.jsp">
+		<put-attribute name="header" value="/jsp/Header.jsp" />
+		<put-attribute name="menu" value="/jsp/menu.jsp"/>
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/jsp/Footer.jsp" />
+	</definition>
+	
+	<definition name="UserLayout" template="/jsp/MyLayout.jsp">
+		<put-attribute name="header" value="/jsp/Header.jsp" />
+		<put-attribute name="menu" value="/jsp/Usermenu.jsp"/>
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/jsp/Footer.jsp" />
+	</definition>
+	
+	<definition name="AdminLayout" template="/jsp/MyLayout.jsp">
+		<put-attribute name="header" value="/jsp/Header.jsp" />
+		<put-attribute name="menu" value="/jsp/Adminmenu.jsp"/>
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/jsp/Footer.jsp" />
+	</definition>
+
+	<definition name="Home" extends="MainLayout">
+		<put-attribute name="body" value="/jsp/Home.jsp" />
+	</definition>
+	
+	
+	
+	<definition name="ContactUs" extends="MainLayout">
+		<put-attribute name="body" value="/jsp/cnt.jsp" />
+	</definition>
+	
+	<definition name="intc" extends="MainLayout">
+		<put-attribute name="body" value="/jsp/intc.jsp" />
+	</definition>
+	
+	
+	<definition name="AboutUs" extends="MainLayout">
+		<put-attribute name="body" value="/jsp/abt.jsp" />
+	</definition>
+		
+	<definition name="login_page" extends="MainLayout">
+		<put-attribute name="body" value="/jsp/Login.jsp" />
+		<put-attribute name="menu" value="/jsp/Loginimg.jsp"/>     
+	</definition>
+	<definition name="Success" extends="UserLayout">
+		<put-attribute name="body" value="/jsp/success.jsp"/>
+	</definition>
+	<definition name="Success1" extends="UserLayout">
+		<put-attribute name="menu" value="/jsp/Usermenu.jsp"/>
+	</definition>
+	<definition name="transfer_succ" extends="UserLayout">
+		<put-attribute name="body" value="/jsp/transfersucc.jsp"/>
+	</definition>
+	<definition name="transfer_unsucc" extends="UserLayout">
+		<put-attribute name="body" value="/jsp/transferunsucc.jsp"/>
+	</definition>
+	<definition name="admin_home" extends="AdminLayout">
+		<put-attribute name="body" value="/jsp/AdminLogin.jsp"/>
+		<put-attribute name="menu" value="/jsp/adminimg.jsp"/>
+	</definition>
+	
+	<definition name="admin_home1" extends="AdminLayout">
+		<put-attribute name="body" value=""/>
+		<put-attribute name="menu" value="/jsp/Adminmenu.jsp"/>
+	</definition>
+	
+	<definition name="admin_succ" extends="AdminLayout">
+		<put-attribute name="body" value="/jsp/adminsuccess.jsp"/>
+		<put-attribute name="menu" value="/jsp/Adminmenu.jsp"/>
+	</definition>
+	
+	<definition name="createform" extends="AdminLayout">
+		<put-attribute name="body" value="/jsp/createform.jsp"/>
+		<put-attribute name="menu" value="/jsp/Adminmenu.jsp"/>
+	</definition>
+	
+	<definition name="successinsert" extends="AdminLayout">
+		<put-attribute name="body" value="/jsp/successinsert.jsp"/>
+		<put-attribute name="menu" value="/jsp/Adminmenu.jsp"/>
+	</definition>
+	
+	<definition name="viewaccount" extends="AdminLayout">
+		<put-attribute name="body" value="/jsp/viewaccount.jsp"/>
+		<put-attribute name="menu" value="/jsp/Adminmenu.jsp"/>
+	</definition>
+	
+	<definition name="modifypagetiles" extends="AdminLayout">
+		<put-attribute name="body" value="/jsp/modifyacc.jsp"/>
+		<put-attribute name="menu" value="/jsp/Adminmenu.jsp"/>
+	</definition>
+	
+	<definition name="modifyacctiles" extends="AdminLayout">
+		<put-attribute name="body" value="/jsp/modifydetails.jsp"/>
+		<put-attribute name="menu" value="/jsp/Adminmenu.jsp"/>
+	</definition>
+	
+	<definition name="modifysuccess" extends="AdminLayout">
+		<put-attribute name="body" value="/jsp/modifysuccess.jsp"/>
+		<put-attribute name="menu" value="/jsp/Adminmenu.jsp"/>
+	</definition>
+	
+	<definition name="depositadmin" extends="AdminLayout">
+		<put-attribute name="body" value="/jsp/depositenteracc.jsp"/>
+		<put-attribute name="menu" value="/jsp/Adminmenu.jsp"/>
+	</definition>
+	
+	<definition name="deposit_page" extends="AdminLayout">
+		<put-attribute name="body" value="/jsp/deposit_page.jsp"/>
+		<put-attribute name="menu" value="/jsp/Adminmenu.jsp"/>
+	</definition>
+	
+	<definition name="deposited_sucess" extends="AdminLayout">
+		<put-attribute name="body" value="/jsp/deposit_success.jsp"/>
+		<put-attribute name="menu" value="/jsp/Adminmenu.jsp"/>
+	</definition>
+	
+	<definition name="deposited_unsucess" extends="AdminLayout">
+		<put-attribute name="body" value="/jsp/deposit_unsuccess.jsp"/>
+		<put-attribute name="menu" value="/jsp/Adminmenu.jsp"/>
+	</definition>
+	
+	<definition name="not_found" extends="AdminLayout">
+		<put-attribute name="body" value="/jsp/not_found1.jsp"/>
+		<put-attribute name="menu" value="/jsp/Adminmenu.jsp"/>
+	</definition>
+
+	<definition name="withdrawal_page" extends="AdminLayout">
+		<put-attribute name="body" value="/jsp/withdrawal_enter.jsp"/>
+		<put-attribute name="menu" value="/jsp/Adminmenu.jsp"/>
+	</definition>
+	
+	<definition name="withdrwal_check_success" extends="AdminLayout">
+		<put-attribute name="body" value="/jsp/withdrawal_main.jsp"/>
+		<put-attribute name="menu" value="/jsp/Adminmenu.jsp"/>
+	</definition>
+	
+	<definition name="withrawal_success" extends="AdminLayout">
+		<put-attribute name="body" value="/jsp/withdrawal_success.jsp"/>
+		<put-attribute name="menu" value="/jsp/Adminmenu.jsp"/>
+	</definition>
+	
+	<definition name="withrawal_unsuccess" extends="AdminLayout">
+		<put-attribute name="body" value="/jsp/withdrawal_unsuccess.jsp"/>
+		<put-attribute name="menu" value="/jsp/Adminmenu.jsp"/>
+	</definition>
+	<definition name="userdetails_page" extends="UserLayout">
+		<put-attribute name="body" value="/jsp/userdetails.jsp"/>
+	</definition>
+	<definition name="transaction" extends="UserLayout">
+		<put-attribute name="body" value="/jsp/transaction.jsp"/>
+	</definition>
+	<definition name="transfer_page" extends="UserLayout">
+		<put-attribute name="body" value="/jsp/transfer_page.jsp"/>
+	</definition>
+	
+	<definition name="invalid_acc" extends="MainLayout">
+		<put-attribute name="body" value="/jsp/invalid_credential.jsp" />
+	</definition>
+	
+	<definition name="deletepage" extends="AdminLayout">
+		<put-attribute name="body" value="/jsp/deletepage.jsp"/>
+		<put-attribute name="menu" value="/jsp/Adminmenu.jsp"/>
+	</definition>
+	
+	<definition name="deletedisplay" extends="AdminLayout">
+		<put-attribute name="body" value="/jsp/deletedisplay.jsp"/>
+		<put-attribute name="menu" value="/jsp/Adminmenu.jsp"/>
+	</definition>
+	
+	<definition name="deleted" extends="AdminLayout">
+		<put-attribute name="body" value="/jsp/deleted.jsp"/>
+		<put-attribute name="menu" value="/jsp/Adminmenu.jsp"/>
+	</definition>
+</tiles-definitions>
