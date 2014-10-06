@@ -24,6 +24,10 @@ public class AdminActions implements SessionAware, ModelDriven<User_detail>{
 		return "success";
 	}
 	
+	public String createTask() {
+		return "success";
+	}
+	
 	public String modifypage() {
 		return "success";
 	}
