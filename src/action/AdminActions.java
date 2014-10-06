@@ -21,7 +21,7 @@ public class AdminActions implements SessionAware, ModelDriven<User_detail>{
 	}
 
 	public String createaccount() {
-		return "success";
+		return "Fialed sads one 2";
 	}
 	
 	public String modifypage() {
